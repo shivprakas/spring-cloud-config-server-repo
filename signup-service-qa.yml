@@ -1,0 +1,31 @@
+# Spring Boot Configuration
+spring:
+  info:
+    build:
+      encoding: UTF-8
+      location: classpath:META-INF/build-info.properties
+      
+# JPA Properties
+  jpa:
+    show-sql: true
+    generate-ddl: true
+    hibernate.ddl-auto: update
+    database: postgresql
+    #database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+        
+      
+# Database
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+    hikari:
+      connection-timeout: 20000
+      maximum-pool-size: 5
+ 
